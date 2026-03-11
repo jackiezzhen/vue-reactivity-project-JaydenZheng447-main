@@ -1,5 +1,7 @@
 <template>
   <div class="container2">
+
+    <RouterLink to="/test-view">Test Views</RouterLink>
     <span class="approvalBar">
       USP (Conservative ) Approval:
       <span>{{ Conservative_love }}%</span>
@@ -48,7 +50,6 @@
     <button>Click here to see if Parliament will accept your new Constitution</button>
     <div v-if="showResults === true">Your new Constitution is project to {{DidYouPassOrFail}}. <br>You are expected to have a total of {{MP_votes}} votes and the following parties will likely support you: {{Parties_that_support_you}}</div>
     <div v-else></div>
-    <RouterLink to="/test-view">Test Views</RouterLink>
   </div>
 </template>
 

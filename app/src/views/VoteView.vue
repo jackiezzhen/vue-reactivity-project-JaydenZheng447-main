@@ -1,3 +1,5 @@
+<!-- this is not actively used; this vue serves for only testing purposes -->
+
 <template>
   <div class="container2">
     <span class="approvalBar">
