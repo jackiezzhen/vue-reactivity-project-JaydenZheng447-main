@@ -10,11 +10,7 @@ import ParliamentView from '@/views/Parliament.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: CookieClicker,
-    },
+
     {
       path: '/user-create',
       name: 'user-create',
@@ -31,8 +27,8 @@ const router = createRouter({
       component: TestView,
     },
     {
-      path: '/vote',
-      name: 'vote',
+      path: '/',
+      name: 'home',
       component: VoteView,
     },
     {

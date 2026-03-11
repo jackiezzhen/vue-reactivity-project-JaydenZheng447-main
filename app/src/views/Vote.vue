@@ -45,6 +45,7 @@
       <p>{{ s4 }}</p>
       <button @click="rightButtonClick(4)">&#8594;</button>
     </div>
+    <button>Click here to see if Parliament will accept your new Constitution</button>
     <RouterLink to="/test-view">Test Views</RouterLink>
   </div>
 </template>
@@ -226,16 +227,58 @@ function rightButtonClick(input) {
   }
 }
 
-/* Conservative_love.value += 2 * love_Multiplier
-Liberal_love.value += 2 * love_Multiplier
-Ethnic_love.value += 2 * love_Multiplier
-Democratic_Socialism_love.value += 2 * love_Multiplier
-Nationalist_love.value += 2 * love_Multiplier */
+let MP_votes = 0
+let Parties_that_support_you = ref([])
+function finalVoteCalculator(){
+  if (Conservative_love.value > 50){
+    MP_votes += 62
+    Parties_that_support_you.value.push('United Sordland Party Conservatives')
+  }
+  else{}if (Liberal_love.value > 50){
+    MP_votes += 62
+
+    Parties_that_support_you.value.push('United Sordland Party Liberals')
+  }
+  else{}if (Nationalist_love.value > 50){
+    MP_votes += 62
+
+    Parties_that_support_you.value.push('National Front Party')
+  }
+  else{}if (Democratic_Socialism_love.value > 50){
+    MP_votes += 62
+
+    Parties_that_support_you.value.push('People`s Justice and Freedom Party')
+  }
+  else{}if (Ethnic_love.value > 50){
+    MP_votes += 62
+
+    Parties_that_support_you.value.push('Worker`s party of Bludia')
+  }
+  else{}
+
+}
+
+let showResults = ref(false)
+
+
+function showResultFunction() {
+  console.log('Old showResults value: ' + showResults.value)
+
+  if (showResults.value == false) {
+    showResults.value = true
+    console.log('New showResults value: ' + showResults.value)
+    return 
+  } else {
+    showResults.value = false 
+    console.log('New showResults value: ' + showResults.value)
+    return 
+  }
+    
+}
 </script>
 
 <style scoped>
-/* img {
-} */
+
 .container {
   display: flex;
   flex-direction: column;
